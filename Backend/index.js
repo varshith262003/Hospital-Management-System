@@ -20,6 +20,11 @@ app.use(cors(
 
 app.use('/api/v1/hospitals', hospitalRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Hospital Management API');
+});
+
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
