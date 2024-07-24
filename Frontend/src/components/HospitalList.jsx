@@ -13,7 +13,7 @@ const HospitalList = () => {
 
   const fetchHospitals = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/v1/hospitals?city=${city}`);
+      const { data } = await axios.get(`https://hospitalserver-rose.vercel.app/api/v1/hospitals?city=${city}`);
       setHospitals(data);
     } catch (error) {
       console.error('Error fetching hospitals:', error);
