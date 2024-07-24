@@ -37,7 +37,7 @@ const HospitalCreationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    axios.post('http://localhost:5000/api/v1/hospitals/create', formData)
+    axios.post('https://hospitalserver-rose.vercel.app/api/v1/hospitals/create', formData)
       .then(() => {
         alert('Hospital added successfully');
         setFormData({
