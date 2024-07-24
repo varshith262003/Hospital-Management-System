@@ -11,12 +11,10 @@ connectDB();
 const app = express();
 
 app.use(express.json());
-app.use(cors(
-    {
-        origin: ['http://localhost:5173','https://hms-mern.netlify.app/'],
-        credentials: true,
-    }
-));
+app.use(cors({
+        origin: ['http://localhost:5173','https://hms-mern.netlify.app'],
+        credentials: true
+}));
 
 app.use('/api/v1/hospitals', hospitalRoutes);
 
