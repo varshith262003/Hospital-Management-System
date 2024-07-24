@@ -28,7 +28,7 @@ const EditHospitalForm = ({ data, onEdit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    axios.put(`http://localhost:5000/api/v1/hospitals/update?id=${hospital._id}`, formData)
+    axios.put(`https://hospitalserver-rose.vercel.app/v1/hospitals/update?id=${hospital._id}`, formData)
       .then(() => {
         alert('Hospital updated successfully');
         onEdit();
